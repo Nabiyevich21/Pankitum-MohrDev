@@ -22,6 +22,15 @@ export default class App extends Component {
     }
    
   }
+// ! reset count
+resetCount=()=>{
+  if(this.state.count>0){
+    this.setState({count:0})
+  }else{
+    alert("Look at number none")
+  }
+}
+
   render() {
     return (
       <div>
@@ -35,6 +44,7 @@ export default class App extends Component {
           <button className="btn" onClick={this.removeCount}>Click Remove</button>
 
         </div>
+        <button id="btn-reset" onClick={this.resetCount}>Reset Count</button>
       </div>
     )
   }

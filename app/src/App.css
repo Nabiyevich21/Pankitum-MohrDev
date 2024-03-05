@@ -37,3 +37,22 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 30px;
 }
+
+#btn-reset{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 2px solid #d7694a;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn-reset:hover{
+  background-color: #d7694a;
+  color: #fff;
+}
