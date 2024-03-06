@@ -1,50 +1,27 @@
-import "./App.css";
 import React, { Component } from 'react'
-
+import Card from './components/card/Card'
+import  './components/card/Card.css'
 export default class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      count:0
-    }
-  }
-// ! Add Count
-  addCount =()=>{
-    this.setState({count:this.state.count+1})
-  }
+      img: '',
+      name:'Muhammadqodir',
+      description:'Muhammadqodir is Student of the PDP Academy',
+    };
 
-  // ! remove Count
-  removeCount=()=>{
-    if(this.state.count>0){
-      this.setState({count: this.state.count-1})
-    }else{
-      this.setState({count:0})
-    }
-   
+   this.changeName=this.changeName.bind(this)
   }
-// ! reset count
-resetCount=()=>{
-  if(this.state.count>0){
-    this.setState({count:0})
-  }else{
-    alert("Look at number none")
-  }
-}
-
+  changeName(nawName){
+    this.setState({name: nawName})
+   }
+  
   render() {
+    const { name, description } = this.state
     return (
       <div>
-        <h1 className="innerH1">Hello World✌️</h1>
-        <div className="contents">
-
-          <button onClick={this.addCount} className="btn">Click Add </button>
-
-          <h3 className="countNum">{this.state.count}</h3>
-
-          <button className="btn" onClick={this.removeCount}>Click Remove</button>
-
-        </div>
-        <button id="btn-reset" onClick={this.resetCount}>Reset Count</button>
+       
+        <Card name={name} description={description} changeName={this.changeName}  />
       </div>
     )
   }
