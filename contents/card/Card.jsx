@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Boys from '../card/Boys.jpg'
-import  '../card/Card.css'
+import Boys from './Boys.jpg'
+import  './Card.css'
 export default class Card extends Component {
     constructor(props) {
         super(props);

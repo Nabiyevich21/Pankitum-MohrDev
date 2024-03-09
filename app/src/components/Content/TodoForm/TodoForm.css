@@ -1,0 +1,35 @@
+
+form{
+    border-radius: 5px;
+    border: 1.5px solid ;
+    padding: 30px 20px 40px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    gap: 10px;
+}
+
+.Input__img{
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 17px;
+}
+
+.Input__text{
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 17px;
+}
+
+.Input__data{
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 17px;
+}
+
+.Todo__Btn{
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 17px;
+}
