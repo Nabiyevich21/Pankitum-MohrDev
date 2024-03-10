@@ -1,0 +1,80 @@
+.contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+   gap: 50px;
+}
+
+
+
+.Card__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    border: 1.5px solid ;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.Card__img{
+    border-radius: 15px;
+
+}
+
+.Card__paragraph{
+    margin: 10px auto;
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.Card__h2{
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.Card__span{
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.Card__btn{
+    display: flex;
+    gap: 10px;
+}
+
+.Card__edit{
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid #d7694a;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.Card__edit:hover{
+    background-color: #d7694a;
+    color: #fff;
+}
+
+.Card__delete{
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid #f93a05;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.Card__delete:hover{
+    background-color: #f93a05;
+    color: #fff;
+}
