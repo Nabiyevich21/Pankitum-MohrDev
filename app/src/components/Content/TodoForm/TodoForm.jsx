@@ -8,10 +8,8 @@ export default class TodoForm extends Component {
             task: '',
             data: '',
         }
-        this.handleInputValue =
-            this.handleInputValue.bind(this)
-        this.handleSubmitValue =
-            this.handleSubmitValue.bind(this)
+        this.handleInputValue = this.handleInputValue.bind(this)
+        this.handleSubmitValue = this.handleSubmitValue.bind(this)
     }
 
     handleInputValue(e) {
@@ -27,13 +25,9 @@ export default class TodoForm extends Component {
 
     render() {
         return (
-            <form
-                onSubmit={this.handleSubmitValue}
-            >
+            <form onSubmit={this.handleSubmitValue}>
                 <input
-                    onChange={
-                        this.handleInputValue
-                    }
+                    onChange={this.handleInputValue}
                     required
                     name="img"
                     className="Input__text"
@@ -41,9 +35,7 @@ export default class TodoForm extends Component {
                     placeholder="Images"
                 />
                 <input
-                    onChange={
-                        this.handleInputValue
-                    }
+                    onChange={this.handleInputValue}
                     required
                     name="task"
                     className="Input__text"
@@ -51,16 +43,12 @@ export default class TodoForm extends Component {
                     placeholder="Todo Name"
                 />
                 <input
-                    onChange={
-                        this.handleInputValue
-                    }
+                    onChange={this.handleInputValue}
                     name="data"
                     className="Input__data"
                     type="date"
                 />
-                <button className="Todo__Btn">
-                    Add Todo
-                </button>
+                <button className="Todo__Btn">Add Todo</button>
             </form>
         )
     }
