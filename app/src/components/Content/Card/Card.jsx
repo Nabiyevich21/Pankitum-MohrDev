@@ -3,7 +3,9 @@ import  './Card.css'
 
 export default class Card extends Component {
   render() {
+    const {img, id,task, data,completed} = this.props.item
     const cardStyle={
+        backgroundColor: completed ? 'green' : 'yellow',
         Display: 'flex',
         flexDirection: 'column',
     }
@@ -11,14 +13,14 @@ export default class Card extends Component {
      
       <div className="contents">
         <div className='Card__content'>
-            <img className='Card__img' src={this.props.img} alt="" />
-            <label className={cardStyle} htmlFor={this.props.id}>
-            <p className='Card__paragraph'>Completed <input type="checkbox" id={this.props.id} />
+            <img className='Card__img' src={img} alt="" />
+            <label className={cardStyle} htmlFor={id}>
+            <p className='Card__paragraph'>Completed <input type="checkbox" id={id}  defaultChecked={completed} onChange={() =>this.props.completedTodo(id)}/>
             </p>
         
             </label>
-          <h2 className='Card__h2'>{this.props.task}</h2>
-          <span className='Card__span'>{this.props.data}</span>
+          <h2 className='Card__h2'>{task}</h2>
+          <span className='Card__span'>{data}</span>
           <div className='Card__btn'>
           <button className='Card__edit'>Edit 🖊️</button>
           <button className='Card__delete'>Delete 🗑️</button>
