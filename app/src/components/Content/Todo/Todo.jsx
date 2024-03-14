@@ -18,6 +18,8 @@ export default class Todo extends Component {
         }
         this.addTodo = this.addTodo.bind(this)
         this.completedTodo = this.completedTodo.bind(this)
+        this.deleteTodo = this.deleteTodo.bind(this)
+        this.editTodo = this.editTodo.bind(this)
     }
 
     addTodo(todo) {
@@ -29,11 +31,33 @@ export default class Todo extends Component {
         this.setState({ todos: [...this.state.todos, newTodo] })
     }
 
+    //* completed Todo
     completedTodo(id) {
         const TodoEl = this.state.todos.map((todo) => {
             if (todo.id === id) {
                 todo.completed = !todo.completed
                 return todo
+            } else {
+                return todo
+            }
+        })
+        this.setState({ todos: TodoEl })
+    }
+
+    //* delete todo
+    deleteTodo(id) {
+        const TodoDeleteEl = this.state.todos.filter((todo) => {
+            return todo.id !== id
+        })
+        this.setState({ todos: TodoDeleteEl })
+    }
+
+    //* edit todo
+    editTodo(id, updateTodo) {
+        const TodoEl = this.state.todos.map((todo) => {
+            if (todo.id === id) {
+                const newTodo = { ...todo, ...updateTodo }
+                return newTodo
             } else {
                 return todo
             }
@@ -47,6 +71,8 @@ export default class Todo extends Component {
                 <TodoList
                     todos={this.state.todos}
                     completedTodo={this.completedTodo}
+                    deleteTodo={this.deleteTodo}
+                    editTodo={this.editTodo}
                 />
             </div>
         )
